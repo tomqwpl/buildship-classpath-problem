@@ -1,0 +1,4 @@
+dependencies {
+	testImplementation 'io.rest-assured:rest-assured:4.1.2'
+	testImplementation project(':project2')
+}

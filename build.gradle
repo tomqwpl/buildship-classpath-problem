@@ -1,0 +1,27 @@
+
+
+allprojects {
+    group = 'fixtureTest'
+    version = '1.0.0'
+}
+
+subprojects {
+	apply plugin: 'java-library'
+	
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		testImplementation 'org.hamcrest:hamcrest:2.1'
+		testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
+		testImplementation 'org.junit.jupiter:junit-jupiter:5.5.1'
+		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+		testImplementation 'org.junit.platform:junit-platform-launcher:1.4.2'
+	}
+	
+    test {
+		useJUnitPlatform()
+	}	
+}
+
